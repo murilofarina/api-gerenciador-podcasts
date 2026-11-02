@@ -46,3 +46,5 @@ GET: Vou retornar em uma API REST (json):
     }
 ]
 ```
+
+GET: Retorna a lista de episodios baseado em um parâmetro enviado pelo cliente do nome do podcast
