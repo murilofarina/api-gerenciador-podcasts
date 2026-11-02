@@ -1,10 +1,11 @@
 import * as http from "http";
+import {getListEpisodes} from './controllers/podcasts-controller'; // conecta o controller com o server
 
 const server = http.createServer(
-    (request: http.IncomingMessage, response: http.ServerResponse) => {
-        response.statusCode = 200;
-        response.setHeader("Content-Type", "text/plain");
-        response.end("Olá, mundo!");
+    async (req: http.IncomingMessage, res: http.ServerResponse) => {
+        if(req.method === "GET") {
+            await getListEpisodes(req, res);
+        }
     }
 );
 
