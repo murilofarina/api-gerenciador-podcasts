@@ -1,0 +1,32 @@
+{
+  "name": "api-gerenciador-podcasts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start:dev": "tsx --env-file=.env src/server.ts",
+    "start:watch": "tsx watch --env-file=.env src/server.ts",
+    "dist": "tsup src",
+    "start:dist": "npm run dist && --env-file=.env node/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murilofarina/api-gerenciador-podcasts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murilofarina/api-gerenciador-podcasts/issues"
+  },
+  "homepage": "https://github.com/murilofarina/api-gerenciador-podcasts#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsup": "^9.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
