@@ -1,0 +1,27 @@
+export enum ContentType {
+
+    JSON = "application/json",
+    JSON_UTF8 = "application/json; charset=utf-8",
+    TEXT = "text/plain",
+    TEXT_UTF8 = "text/plain; charset=utf-8",
+    HTML = "text/html",
+    HTML_UTF8 = "text/html; charset=utf-8",
+    XML = "application/xml",
+    JAVASCRIPT = "application/javascript",
+    CSS = "text/css",
+    CSV = "text/csv",
+    PDF = "application/pdf",
+    OCTET_STREAM = "application/octet-stream",
+    MP3 = "audio/mpeg",
+    MP4 = "video/mp4",
+    OGG_AUDIO = "audio/ogg",
+    OGG_VIDEO = "video/ogg",
+    PNG = "image/png",
+    JPEG = "image/jpeg",
+    GIF = "image/gif",
+    WEBP = "image/webp",
+    SVG = "image/svg+xml",
+    ICO = "image/x-icon",
+    ZIP = "application/zip",
+    
+}
