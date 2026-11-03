@@ -20,9 +20,7 @@ export const getFilterEpisodes = async (
     res: ServerResponse,
 ) => {
 
-    const queryString = req.url?.split("?p=")[1] || "";        // pega a queryString, pos 1
-
-    const content = await serviceFilterEpisodes(queryString);
+    const content = await serviceFilterEpisodes(req.url);
 
     res.writeHead(200, {'Content-Type' : "application/json"});
     res.end(JSON.stringify(content));

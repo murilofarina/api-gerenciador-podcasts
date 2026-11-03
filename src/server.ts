@@ -1,29 +1,22 @@
 import * as http from "http";
 import { getFilterEpisodes, getListEpisodes } from './controllers/podcasts-controller'; // conecta o controller com o server
+import { Routes } from "./routes/routes";
 
 const server = http.createServer(
 
     async (req: http.IncomingMessage, res: http.ServerResponse) => {
 
-        // queryString: consulta em texto
         
-        const [ baseUrl, queryString ] = req.url?.split("?") ?? ["", ""];
+        const [ baseUrl, queryString ] = req.url?.split("?") ?? ["", ""];   // queryString: consulta em texto
 
-        console.log(baseUrl);
-        console.log(queryString);
-
-        // listar podcasts com rota
-        if(req.method === "GET" && baseUrl === "/api/list") {
+        if(req.method === "GET" && baseUrl === Routes.LIST) {               // listar podcasts com rota
             await getListEpisodes(req, res);
         }
 
-        // filtrar podcasts com rota
-        if(req.method === "GET" && baseUrl === "/api/episode") {
+        if(req.method === "GET" && baseUrl === Routes.EPISODE) {            // filtrar podcasts com rota
             await getFilterEpisodes(req, res);
         }
-
     }
-
 );
 
 const port = process.env.PORT;
